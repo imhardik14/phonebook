@@ -1,0 +1,112 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Phonebook",
+		"_postman_id": "8be56a33-4cda-155f-83de-7676d79ee198",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"url": "http://localhost:8080/user/list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list phones",
+			"request": {
+				"url": "http://localhost:8080/user/phones/a2c7452e-64e0-4649-92b8-15e5bf20b366",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save User",
+			"request": {
+				"url": "http://localhost:8080/user/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \n        \"userName\": \"test\",\n        \"password\": \"test\",\n        \"email\": \"test@test.com\",\n        \"type\": \"USER\",\n        \"phones\": [\n        \t{\n        \t\t\"phoneName\" : \"oneplus\",\n        \t\t\"phoneNumber\" : \"081234567\",\n        \t\t\"model\" : \"ANDROID\"\n        \t},\n        \t{\n        \t\t\"phoneName\" : \"iphone\",\n        \t\t\"phoneNumber\" : \"081234568\",\n        \t\t\"model\" : \"IPHONE\"\n        \t}\n        \t\n        \t\n        \t]\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"url": "http://localhost:8080/user/0a2724f3-14a0-4616-9a44-56d6fdcc3955",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"url": "http://localhost:8080/user/3ce89878-dfb6-4e33-b47f-37d1a25d0136",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n     \"userName\": \"test\",\n    \"password\": \"test\",\n    \"email\": \"test@test.com\",\n    \"type\": \"USER\",\n     \"phones\": [\n        \t{\n        \t\t\"phoneName\" : \"oneplus\",\n        \t\t\"phoneNumber\" : \"081234567\",\n        \t\t\"model\" : \"ANDROID\"\n        \t}\n        \t]\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
